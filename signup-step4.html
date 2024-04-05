@@ -9,14 +9,8 @@
   <link rel="icon" href="http://203.193.173.125/buildriseshine/favicon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/wizard.css" />
-  <link
-  type="text/css"
-  href="assets/js/jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.css"
-  rel="stylesheet"
-/>
 
 </head>
 
@@ -24,7 +18,7 @@
   <header>
     <div class="form-wizard">
       <h1>Form Wizard</h1>
-      <p class=""><a href="https://github.com/chakradhar-brs/form-wizard?tab=readme-ov-file" target="_blank" >Git Repository</a></p>
+      <p class=""><a href="https://github.com/chakradhar-brs/form-wizard" target="_blank" >Git Repository</a></p>
     </div>
   </header>
 
@@ -39,16 +33,72 @@
                 <div class="Grid-cell">
                   <div class="formMiddleBlock">
                     <div class="brandSection">
-                      <h1>When can we contact you?</h1>
-                      <p>Book a time and date slot with one of our team.</p>
+                      <h1>Tell us about your career goal</h1>
+                      <p>
+                        What are you looking for ..?
+                      </p>
                     </div>
-                    <form action="signup-step4.html">
-                      <div>
-                        <div id="date_picker"></div>
+                    <form name="myform" onSubmit="return validate()" action="thankyou.html">
+                      <div class="plans">
+                        <label class="plan basic-plan" for="basic">
+                          <input type="radio" name="plan" id="basic"  value="a" name="plan" />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span> Upskill</span>
+                            </div>
+                          </div>
+                        </label>
+  
+                        <label class="plan complete-plan" for="gettingStarted">
+                          <input type="radio" id="gettingStarted" value="b" name="plan" />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Job</span>
+                            </div>
+                          </div>
+                        </label>
+  
+                        <label class="plan complete-plan" for="jobReady">
+                          <input type="radio" id="jobReady" value="c" name="plan" />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Career Shift</span>
+                            </div>
+                          </div>
+                        </label>
+  
+                        <div>
+                          <p id="error1"></p>
+                        </div>
                       </div>
+  
+                      <div class="radioGroup">
+                        <label>How did you come to know about us?</label>
 
+                        <div class="radioGroup">
+                          <input
+                            type="radio"
+                            class="required"
+                            name="selection"
+                            id="radio1"
+                          /><label>Newspaper</label>
+                          <input
+                            type="radio"
+                            class="required"
+                            name="selection"
+                            id="radio2"
+                          /><label>Friend</label>
+                          <input
+                            type="radio"
+                            class="required"
+                            name="selection"
+                            id="radio3"
+                            /><label>Social-media</label>
+                        </div>
+                      </div>
+  
                       <div>
-                        <button class="btn btn-primary" type="submit">Continue</button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                       </div>
                     </form>
                     <div>
@@ -81,7 +131,6 @@
         </div>
       </div>
     </div>
-
   </main>
 
   <footer class="footer footer-dark">
@@ -104,9 +153,7 @@
   </footer>
 
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="assets/js/jQuery-Date-Time-Picke-Plugin-Simple-Datetimepicker/jquery.simple-dtpicker.js"></script>
-<script defer src="assets/js/signup-step3.js"></script>
+<script defer src="assets/js/signup-step4.js"></script>
 <script defer src="assets/js/script.js"></script>
 
 </html>
