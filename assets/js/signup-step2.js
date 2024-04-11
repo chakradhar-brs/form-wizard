@@ -22,7 +22,7 @@ function validate() {
   if (sel_opt == 'Select an Option') {
     document.getElementById('error2').innerHTML = 'Please select anyone'
     return false
-  } else if (sel_opt == 'a' || sel_opt == 'b' || sel_opt == 'c') {
+  } else if ( sel_opt == 'a' || sel_opt == 'b'|| sel_opt ==='c') {
     document.getElementById('error2').innerHTML = ''
   }
 }
